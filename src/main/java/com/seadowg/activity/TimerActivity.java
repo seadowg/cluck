@@ -4,15 +4,12 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.seadowg.R;
 
-public class TimerActivity extends AppCompatActivity implements View.OnClickListener, TextView.OnEditorActionListener {
+public class TimerActivity extends AppCompatActivity implements View.OnClickListener {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -21,16 +18,6 @@ public class TimerActivity extends AppCompatActivity implements View.OnClickList
 
     findViewById(R.id.start_button).setOnClickListener(this);
     findViewById(R.id.reset_button).setOnClickListener(this);
-    ((EditText) findViewById(R.id.weight)).setOnEditorActionListener(this);
-  }
-
-  @Override
-  public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-    if (actionId == EditorInfo.IME_ACTION_DONE) {
-      onSubmitWeight();
-    }
-
-    return false;
   }
 
   @Override
