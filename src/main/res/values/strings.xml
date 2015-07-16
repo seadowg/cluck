@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="remaining_with_colon">Remaining:</string>
+    <string name="reset">Reset</string>
+    <string name="weight_with_colon">Weight:</string>
+    <string name="cook_for_with_colon">Roast for</string>
+    <string name="mins">mins</string>
+    <string name="no_weight_error">You need to set a weight!</string>
+    <string name="ok">OK</string>
+</resources>
