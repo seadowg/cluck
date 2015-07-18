@@ -1,4 +1,4 @@
-package com.seadowg;
+package com.seadowg.cluck;
 
 import android.app.Application;
 

@@ -1,4 +1,4 @@
-package com.seadowg.activity;
+package com.seadowg.cluck.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.seadowg.R;
+import com.seadowg.cluck.R;
 
 public class TimerActivity extends AppCompatActivity implements View.OnClickListener {
 
