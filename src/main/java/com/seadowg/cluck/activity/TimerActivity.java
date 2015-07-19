@@ -37,7 +37,7 @@ public class TimerActivity extends AppCompatActivity implements View.OnClickList
   private void onSubmitWeight() {
     try {
       Integer weight = Integer.parseInt(((TextView) findViewById(R.id.weight)).getText().toString());
-      Integer totalMinsToCook = Math.round((weight / 500f) * 25f) + 25;
+      Integer totalMinsToCook = Math.round((weight / 450f) * 20f) + 10;
       Integer hoursToCook = totalMinsToCook / 60;
       Integer minsToCook = totalMinsToCook % 60;
 

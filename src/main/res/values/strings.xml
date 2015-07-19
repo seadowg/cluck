@@ -7,4 +7,5 @@
     <string name="mins">mins</string>
     <string name="no_weight_error">You need to set a weight!</string>
     <string name="ok">OK</string>
+    <string name="at_temperature">at 190C</string>
 </resources>

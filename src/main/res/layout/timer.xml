@@ -101,7 +101,7 @@
                 android:textSize="28sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"
-                android:text="at 200C"/>
+                android:text="@string/at_temperature"/>
 
         </LinearLayout>
 
