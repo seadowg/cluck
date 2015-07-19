@@ -22,7 +22,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 22
         versionCode versionNumber()
-        versionName "1.0.0.${versionNumber()}"
+        versionName "1.1.0.${versionNumber()}"
         applicationId "com.seadowg.cluck"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
