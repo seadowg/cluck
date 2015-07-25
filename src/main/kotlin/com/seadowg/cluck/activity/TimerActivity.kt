@@ -28,7 +28,7 @@ public class TimerActivity : AppCompatActivity() {
             val minsToCook = totalMinsToCook % 60
 
             val remaining = findViewById(R.id.remaining) as TextView
-            remaining.setText(hoursToCook.toString() + ":" + minsToCook.toString())
+            remaining.setText(hoursToCook.toString() + ":" + "%02d".format(minsToCook))
 
             findViewById(R.id.running).setVisibility(View.VISIBLE)
             findViewById(R.id.not_running).setVisibility(View.GONE)
