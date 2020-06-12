@@ -22,9 +22,23 @@ public class TimeCalculationTest {
     public ActivityTestRule<TimerActivity> activityRule = new ActivityTestRule<>(TimerActivity.class);
 
     @Test
-    public void calculatesTimeToCookChickenBasedOnWeight() {
+    public void clickingCalculate_showsTimeToCook() {
         onView(withHint("1500")).perform(typeText("2500"), closeSoftKeyboard());
         onView(withText("Calculate")).perform(click());
         onView(withText("2:01")).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void clickingCalculate_whenNoWeightEntered_showsPromptToEnterWeight() {
+        onView(withText("Calculate")).perform(click());
+        onView(withText("You need to set a weight!")).check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void clickingCalculate_andThenClickingReset_letsAnotherWeightBeEntered() {
+        onView(withHint("1500")).perform(typeText("2500"), closeSoftKeyboard());
+        onView(withText("Calculate")).perform(click());
+        onView(withText("Reset")).perform(click());
+        onView(withHint("1500")).perform(typeText("2500"), closeSoftKeyboard());
     }
 }
