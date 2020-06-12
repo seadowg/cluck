@@ -8,9 +8,8 @@ import com.seadowg.cluck.R
 class ErrorDialog(context: Context, message: String) {
     val error = AlertDialog.Builder(context)
             .setMessage(message)
-            .setPositiveButton(R.string.ok, {
-                dialogInterface, i -> dialogInterface.dismiss()
-            }).create()
+            .setPositiveButton(R.string.ok) { dialogInterface, i -> dialogInterface.dismiss()
+            }.create()
 
     fun show() {
         error.show()

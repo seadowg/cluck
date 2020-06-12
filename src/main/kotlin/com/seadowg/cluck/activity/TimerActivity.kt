@@ -1,37 +1,36 @@
 package com.seadowg.cluck.activity
 
-import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
-
+import androidx.appcompat.app.AppCompatActivity
 import com.seadowg.cluck.R
 import com.seadowg.cluck.view.ErrorDialog
+import kotlin.math.roundToInt
 
 public class TimerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        super<AppCompatActivity>.onCreate(savedInstanceState)
+        super.onCreate(savedInstanceState)
         setContentView(R.layout.timer)
 
-        findViewById(R.id.start_button).setOnClickListener { onSubmitWeight() }
-        findViewById(R.id.reset_button).setOnClickListener { onReset() }
+        findViewById<Button>(R.id.start_button).setOnClickListener { onSubmitWeight() }
+        findViewById<Button>(R.id.reset_button).setOnClickListener { onReset() }
     }
 
     private fun onSubmitWeight() {
         try {
-            val weight = Integer.parseInt((findViewById(R.id.weight) as TextView).getText().toString())
-            val totalMinsToCook = Math.round((weight / 450f) * 20f) + 10
+            val weight = Integer.parseInt((findViewById<TextView>(R.id.weight)).text.toString())
+            val totalMinsToCook = ((weight / 450f) * 20f).roundToInt() + 10
             val hoursToCook = totalMinsToCook / 60
             val minsToCook = totalMinsToCook % 60
 
-            val remaining = findViewById(R.id.remaining) as TextView
-            remaining.setText(hoursToCook.toString() + ":" + "%02d".format(minsToCook))
+            val remaining = findViewById<TextView>(R.id.remaining)
+            remaining.text = hoursToCook.toString() + ":" + "%02d".format(minsToCook)
 
-            findViewById(R.id.running).setVisibility(View.VISIBLE)
-            findViewById(R.id.not_running).setVisibility(View.GONE)
+            findViewById<View>(R.id.running).visibility = View.VISIBLE
+            findViewById<View>(R.id.not_running).visibility = View.GONE
         } catch (e: NumberFormatException) {
             val error = ErrorDialog(this, getString(R.string.no_weight_error))
             error.show()
@@ -40,7 +39,7 @@ public class TimerActivity : AppCompatActivity() {
     }
 
     private fun onReset() {
-        findViewById(R.id.running).setVisibility(View.GONE)
-        findViewById(R.id.not_running).setVisibility(View.VISIBLE)
+        findViewById<View>(R.id.running).visibility = View.GONE
+        findViewById<View>(R.id.not_running).visibility = View.VISIBLE
     }
 }
