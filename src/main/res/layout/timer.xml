@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/orange"
     android:padding="24dp">
 
     <RelativeLayout
@@ -16,54 +14,49 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginTop="40dp"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:textColor="@android:color/white"
-                android:text="@string/weight_with_colon"/>
+                android:text="@string/weight_with_colon"
+                android:textSize="28sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/weight"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="64sp"
-                    android:maxLength="4"
+                    android:hint="1500"
                     android:inputType="number"
-                    android:textColor="@android:color/white"
-                    android:hint="1500"/>
+                    android:maxLength="4"
+                    android:textSize="64sp" />
 
                 <TextView
-                    android:layout_marginLeft="8dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
                     android:text="g"
-                    android:textColor="@android:color/white"
-                    android:textSize="64sp"/>
+                    android:textSize="64sp" />
             </LinearLayout>
 
         </LinearLayout>
 
         <Button
             android:id="@+id/start_button"
-            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/button_background"
-            android:textColor="@android:color/white"
-            android:text="Calculate"/>
+            android:layout_marginTop="24dp"
+            android:text="Calculate" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -75,33 +68,30 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_centerInParent="true"
             android:gravity="center_horizontal"
+            android:orientation="vertical"
             android:paddingBottom="64dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:textColor="@android:color/white"
-                android:text="@string/cook_for_with_colon"/>
+                android:text="@string/cook_for_with_colon"
+                android:textSize="28sp" />
 
             <TextView
                 android:id="@+id/remaining"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="64sp"
-                android:textColor="@android:color/white"
-                android:text="12:34"/>
+                android:text="12:34"
+                android:textSize="64sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="28sp"
-                android:textColor="@android:color/white"
                 android:gravity="center"
-                android:text="@string/at_temperature"/>
+                android:text="@string/at_temperature"
+                android:textSize="28sp" />
 
         </LinearLayout>
 
@@ -111,9 +101,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:background="@drawable/button_background"
-            android:textColor="@android:color/white"
-            android:text="@string/reset"/>
+            android:text="@string/reset" />
     </RelativeLayout>
 
 </FrameLayout>

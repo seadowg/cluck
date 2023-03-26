@@ -2,21 +2,32 @@ package com.seadowg.cluck.activity
 
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup.MarginLayoutParams
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.updateLayoutParams
 import com.seadowg.cluck.R
 import com.seadowg.cluck.view.ErrorDialog
+import com.seadowg.cluck.view.setUpEdgeToEdge
 import kotlin.math.roundToInt
 
-public class TimerActivity : AppCompatActivity() {
+class TimerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setUpEdgeToEdge(fitsSystemWindow = true)
+
         setContentView(R.layout.timer)
 
-        findViewById<Button>(R.id.start_button).setOnClickListener { onSubmitWeight() }
-        findViewById<Button>(R.id.reset_button).setOnClickListener { onReset() }
+        val startButton = findViewById<Button>(R.id.start_button)
+        startButton.setOnClickListener { onSubmitWeight() }
+        val resetButton = findViewById<Button>(R.id.reset_button)
+
+        resetButton.setOnClickListener { onReset() }
     }
 
     private fun onSubmitWeight() {

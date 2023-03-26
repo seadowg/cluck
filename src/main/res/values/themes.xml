@@ -1,9 +1,12 @@
 <resources>
-    <style name="ChickenTimer" parent="Theme.AppCompat.NoActionBar">
-        <item name="colorControlNormal">@android:color/white</item>
-        <item name="colorControlActivated">@android:color/white</item>
-        <item name="colorControlHighlight">@android:color/white</item>
+    <style name="ChickenTimer" parent="Theme.Material3.DayNight.NoActionBar">
+<!--        <item name="android:navigationBarColor">-->
+<!--            @android:color/transparent-->
+<!--        </item>-->
 
-        <item name="android:textColor">@android:color/white</item>
+<!--        &lt;!&ndash; Optional: set to transparent if your app is drawing behind the status bar. &ndash;&gt;-->
+<!--        <item name="android:statusBarColor">-->
+<!--            @android:color/transparent-->
+<!--        </item>-->
     </style>
 </resources>
